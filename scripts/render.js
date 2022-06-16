@@ -1,0 +1,13 @@
+const servicios = [
+    {
+        nombre: "interior",
+        precio: 20000,
+        id: 35465
+    },
+    {
+        nombre: "exterior",
+        precio: 16000,
+        id: 85465
+    }
+]
+
