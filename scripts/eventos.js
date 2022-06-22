@@ -2,26 +2,33 @@ const form = document.querySelector("#formulario");
 form.addEventListener("submit", (e) => handleSubmit(e));
 
 const seccionIzquierda = document.querySelector(".inicioJuego");
+const contenedorCartasCompradas = document.querySelector("#contenedorCartas");
 const contenedorFormulario = document.querySelector(".contenedorFormulario");
 
 const crearMensajeSaludo = (cliente) => {
 
-    const mensaje = document.createElement("div");
+    const contenedorSaludo = document.querySelector("#contenedorSaludo");
+    const mensaje = document.createElement("h3");
 
-    mensaje.classList.add(
+    contenedorSaludo.classList.add(
         "saludar"
     );
 
     mensaje.innerHTML = `
 
-            <h3>¡ Hola ${cliente.nombre} ${cliente.apellido},<br> Bienvenido a nuestro simulador de precios !</h3>
+            ¡ Hola ${cliente.nombre} ${cliente.apellido},<br> Bienvenido a nuestro simulador de precios !
 
 `;
-    seccionIzquierda.append(mensaje);
+    contenedorSaludo.append(mensaje);
     console.log(seccionIzquierda);
 
     contenedorFormulario.textContent = "";
 
+    paquetesDeCompras();
+}
+
+
+const paquetesDeCompras = () => {
 
     const contenedorTarjetas = document.createElement('div');
 
@@ -58,86 +65,53 @@ const crearMensajeSaludo = (cliente) => {
     const botonCalculos = document.createElement('div');
     botonCalculos.classList.add("botonParaCalcular");
     botonCalculos.innerHTML += `
-    <button class="calcularPrecio">siguiente</button>
+    <button class="borrarTodo" onclick="eliminarRenderDeLista()">Borrar Todo</button>
+    <button class="calcularPrecio" onclick="calcularPrecio()">siguiente</button>
     `;
     contenedorFormulario.append(botonCalculos);
-    botonCalculos.onclick = () => calcularPrecio();
     //eventos para estos botones de agregar
 
     servicios.forEach(servicio => {
 
         const btn = document.getElementById(`boton-${servicio.id}`);
         btn.addEventListener('click', function () {
-            desactivarBoton(btn);
+            /* desactivarBoton(btn); */
             agregarRenderALista(servicio);
 
         });
     })
 }
 
+
 function agregarRenderALista(servicio) {
     listaRenders.push(servicio);
     sessionStorage.setItem("carrito", JSON.stringify(listaRenders));
-    console.log(servicio);
     imprimirCompras(servicio);
     console.log(listaRenders);
+    alertaDeConfirmacion();
 }
 
 function imprimirCompras(servicio) {
+
     const crearTarjeta = document.createElement('section');
 
     crearTarjeta.classList.add(
         'tarjetaAgregada',
-        servicio.id
+        'eliminar'
     )
     crearTarjeta.innerHTML += `
         <h4> ${servicio.nombre}</h4>
         <div class="contenedorTarjetaAgregada">
         <p>Valor: $${servicio.precio}</p>
-        <button class="eliminarTarjeta" id="btn-eliminar-${servicio.id}"><svg xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-x" width="20" height="20" viewBox="0 0 24 24"
-        stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <line x1="18" y1="6" x2="6" y2="18" />
-        <line x1="6" y1="6" x2="18" y2="18" />
-        </svg></button>
         </div>
         `;
-    seccionIzquierda.append(crearTarjeta);
-
-    listaRenders.forEach(servicio => {
-        document.getElementById(`btn-eliminar-${servicio.id}`).addEventListener('click', function () {
-            eliminarRenderDeLista(servicio.id);
-        });
-    })
+    contenedorCartasCompradas.append(crearTarjeta);
 
 }
 
-function eliminarRenderDeLista(id) {
-    const index = listaRenders.findIndex((servicio) => servicio.id === id);
-    listaRenders.splice(index, 1);
 
-    /* const fede = document.getElementsByClassName(id);
-    console.log(fede);
-    seccionIzquierda.removeChild(fede); */
-
-
-    const btn = document.getElementById(`boton-${id}`);
-    activarBoton(btn);
-    console.log(listaRenders);
-
-}
-
-function desactivarBoton(btn) {
-    btn.disabled = true;
-}
-
-function activarBoton(btn) {
-    btn.disabled = false;
-}
-
-let precio = 0;
 function calcularPrecio() {
+    let precio = 0;
 
     listaRenders.forEach((render) => {
         precio += render.precio;
@@ -146,7 +120,8 @@ function calcularPrecio() {
     const crearTarjeta = document.createElement('section');
 
     crearTarjeta.classList.add(
-        'tarjetaAgregada'
+        'tarjetaAgregada',
+        'eliminar'
     )
     crearTarjeta.innerHTML += `
         <h4> precio total </h4>
@@ -157,17 +132,34 @@ function calcularPrecio() {
     const botonJugar = document.createElement('div');
     botonJugar.classList.add(
         'contenedorBotonJuego',
+        'eliminar'
     );
 
     botonJugar.innerHTML += `
-     <button class="botonJugar" onclick="(presentacionDeJuego())">Jugar por descuentos</button>
-     `;
-
-    seccionIzquierda.append(crearTarjeta);
-    seccionIzquierda.append(botonJugar);
+        <button class="botonJugar" onclick="(presentacionDeJuego())">Jugar por descuentos</button>
+        `;
 
     const btnSiguiente = document.querySelector(".calcularPrecio");
     desactivarBoton(btnSiguiente);
+
+    contenedorCartasCompradas.append(crearTarjeta);
+    contenedorCartasCompradas.append(botonJugar);
+}
+
+function eliminarRenderDeLista() {
+
+    const eliminarTarjetas = document.querySelectorAll('.eliminar');
+    console.log(eliminarTarjetas);
+
+    eliminarTarjetas.forEach(tarjeta => {
+        tarjeta.remove();
+    })
+
+    listaRenders = [];
+    precio = 0;
+    const btnSiguiente = document.querySelector(".calcularPrecio");
+    activarBoton(btnSiguiente);
+
 }
 
 function presentacionDeJuego() {
