@@ -44,6 +44,7 @@ html {
 
 #simulador {
     width: 100vw;
+    height: 100vh;
     display: grid;
     grid-template-columns: 20% auto;
 }
@@ -63,7 +64,7 @@ html {
 
 .imagenLogo {
     width: 20rem;
-    margin-top: 6rem;
+    margin-top: 4rem;
 }
 
 .tituloSimulador {
@@ -281,12 +282,14 @@ html {
     margin: 0 auto;
     margin-top: 4rem;
     display: flex;
-    width: 70%;
+    width: 60%;
+    gap: 2rem;
 }
 
 .botonParaCalcular button {
     cursor: pointer;
     background-color: var(--blancoTransparente);
+    color: var(--blanco);
     border: none;
     border-radius: 0.5rem;
     font-size: 2rem;
@@ -300,14 +303,18 @@ html {
 .calcularPrecio:hover {
     background-color: var(--verdeOscuro);
     height: 6rem;
+}
 
+.borrarTodo:hover {
+    background-color: rgb(182, 93, 93);
+    height: 6rem;
 }
 
 /*TARJETA QUE AGREGA EL USUARIO DE MANERA DINAMICA*/
 
 .tarjetaAgregada {
     background-color: var(--blanco);
-    height: 11rem;
+    height: 8rem;
     margin: 2rem;
     border-radius: 0.5rem;
 }
