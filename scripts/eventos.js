@@ -191,6 +191,10 @@ function presentacionDeJuego() {
             <div><button></button></div>
             <div><button></button></div>
             <div><button></button></div>
+            <div><button></button></div>
+            <div><button></button></div>
+            <div><button></button></div>
+            <div><button></button></div>
         </div>
 
         <div class="calculosJuego">
