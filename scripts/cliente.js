@@ -4,5 +4,4 @@ class Cliente {
         this.apellido = apellido;
         this.email = email;
     }
-
 }

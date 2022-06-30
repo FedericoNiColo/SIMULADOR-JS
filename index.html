@@ -9,6 +9,7 @@
     <meta name="keywords" content="render,fotografias,arquitectura,contacto,email,telefono,instagram, behance">
     <meta name="description" content="Completa las preguntas y juegue por un super descuento para tus renders.">
     <link rel="stylesheet" href="/estilos/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -20,7 +21,6 @@
     <link rel="shortcut icon" href="/imagenes/fa (1).ico" type="image/x-icon">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <script src="scripts/cliente.js" defer></script>
-    <script src="scripts/render.js" defer></script>
     <script src="scripts/eventos.js" defer></script>
     <script src="scripts/app.js" defer></script>
 
@@ -38,6 +38,7 @@
 
         <div id="contenedorSaludo"></div>
         <div id="contenedorCartas"></div>
+        <div id="resumenFinal"></div>
     </section>
 
     <section class="contenedorFormulario ">
@@ -61,6 +62,12 @@
         </form>
 
     </section>
+
+
+    <div id="resumen">
+
+    </div>
+
 
     <!--  <div class="contenedorTarjetas">
 
@@ -112,9 +119,13 @@
 
 
 
-    <!--     <section class="memorama">
+    <!--   <section class="memorama">
 
-        <div class="rectanguloMemorama sombraOscura">
+        <div class="rectanguloMemorama som">
+            <div><button></button></div>
+            <div><button></button></div>
+            <div><button></button></div>
+            <div><button></button></div>
             <div><button></button></div>
             <div><button></button></div>
             <div><button></button></div>
@@ -130,14 +141,19 @@
         </div>
 
         <div class="calculosJuego">
-
+            <div>
+                <h2 id="aciertos" class="estadisticas">Aciertos: 0</h2>
+            </div>
+            <div>
+                <h2 id="tiempo" class="estadisticas">Tiempo: 30</h2>
+            </div>
         </div>
 
     </section> -->
 
     <!-- <script src="/script/eventos.js"></script>
      <script src="/script/script.js"></script> -->
-    
+
 </body>
 
 </html>
