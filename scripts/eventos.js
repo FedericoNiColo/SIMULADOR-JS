@@ -248,22 +248,22 @@ function presentacionDeJuego() {
     tableroMemorama.innerHTML += `
     
     <div class="rectanguloMemorama ">
-            <div class="sombraClara"><button id="0" onclick="girar(0)"></button></div>
-            <div class="sombraClara"><button id="1" onclick="girar(1)"></button></div>
-            <div class="sombraClara"><button id="2" onclick="girar(2)"></button></div>
-            <div class="sombraClara"><button id="3" onclick="girar(3)"></button></div>
-            <div class="sombraClara"><button id="4" onclick="girar(4)"></button></div>
-            <div class="sombraClara"><button id="5" onclick="girar(5)"></button></div>
-            <div class="sombraClara"><button id="6" onclick="girar(6)"></button></div>
-            <div class="sombraClara"><button id="7" onclick="girar(7)"></button></div>
-            <div class="sombraClara"><button id="8" onclick="girar(8)"></button></div>
-            <div class="sombraClara"><button id="9" onclick="girar(9)"></button></div>
-            <div class="sombraClara"><button id="10" onclick="girar(10)"></button></div>
-            <div class="sombraClara"><button id="11" onclick="girar(11)"></button></div>
-            <div class="sombraClara"><button id="12" onclick="girar(12)"></button></div>
-            <div class="sombraClara"><button id="13" onclick="girar(13)"></button></div>
-            <div class="sombraClara"><button id="14" onclick="girar(14)"></button></div>
-            <div class="sombraClara"><button id="15" onclick="girar(15)"></button></div>
+            <div class="sombraClaraBlanca"><button id="0" onclick="girar(0)"></button></div>
+            <div class="sombraClaraBlanca"><button id="1" onclick="girar(1)"></button></div>
+            <div class="sombraClaraBlanca"><button id="2" onclick="girar(2)"></button></div>
+            <div class="sombraClaraBlanca"><button id="3" onclick="girar(3)"></button></div>
+            <div class="sombraClaraBlanca"><button id="4" onclick="girar(4)"></button></div>
+            <div class="sombraClaraBlanca"><button id="5" onclick="girar(5)"></button></div>
+            <div class="sombraClaraBlanca"><button id="6" onclick="girar(6)"></button></div>
+            <div class="sombraClaraBlanca"><button id="7" onclick="girar(7)"></button></div>
+            <div class="sombraClaraBlanca"><button id="8" onclick="girar(8)"></button></div>
+            <div class="sombraClaraBlanca"><button id="9" onclick="girar(9)"></button></div>
+            <div class="sombraClaraBlanca"><button id="10" onclick="girar(10)"></button></div>
+            <div class="sombraClaraBlanca"><button id="11" onclick="girar(11)"></button></div>
+            <div class="sombraClaraBlanca"><button id="12" onclick="girar(12)"></button></div>
+            <div class="sombraClaraBlanca"><button id="13" onclick="girar(13)"></button></div>
+            <div class="sombraClaraBlanca"><button id="14" onclick="girar(14)"></button></div>
+            <div class="sombraClaraBlanca"><button id="15" onclick="girar(15)"></button></div>
         </div>
 
         <div class="calculosJuego">
