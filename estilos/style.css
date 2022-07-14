@@ -18,9 +18,9 @@ html {
 :root {
     /* Constantes de colores*/
     --gris: #505160;
-    --grisOscuro: rgb(37, 36, 36);
-    --grisTransparente: rgba(37, 36, 36, 0.9);
-    --grisTransparente-claro: rgba(12, 11, 11, 0.4);
+    --grisOscuro: rgb(27, 27, 27);
+    --grisTransparente: rgba(32, 32, 32, 0.9);
+    --grisTransparente-claro: rgba(0, 0, 0, 0.4);
     --blancoTransparente: rgba(255, 255, 255, 0.6);
     --azulMarino: #68829E;
     --verdeClaro: #AEBD38;
@@ -122,7 +122,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 4rem;
+    margin: 4em;
 }
 
 
@@ -413,7 +413,7 @@ h4 {
 
 .rectanguloMemorama {
     margin: 0 auto;
-    margin-top: 12rem;
+    margin-top: 5%;
     width: 85%;
     height: 70%;
     display: grid;
@@ -572,7 +572,11 @@ h4 {
         margin: 0 auto;
         margin-top: 15%;
         gap: 5rem;
-        height: 50%;
+        height: 60%;
+    }
+
+    .contenidoTarjeta h4{
+        font-size: 2.3rem;
     }
 
     .tarjetasInterior {
@@ -593,8 +597,7 @@ h4 {
 
 
     .rectanguloMemorama {
-        margin-top: 12rem;
-
+        
         gap: 0.5rem;
     }
 
@@ -723,7 +726,7 @@ h4 {
     }
 
     .rectanguloMemorama {
-        margin-top: 8rem;
+        
         gap: 0.5rem;
 
     }
