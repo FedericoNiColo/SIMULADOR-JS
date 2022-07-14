@@ -542,7 +542,7 @@ h4 {
     .form {
         width: 50%;
         height: 50%;
-        margin-top: 20rem;
+        margin-top: 17rem;
     }
 
     .elementos input {
@@ -570,7 +570,7 @@ h4 {
     .contenedorTarjetas {
         width: 70%;
         margin: 0 auto;
-        margin-top: 15%;
+        margin-top: 12%;
         gap: 5rem;
         height: 60%;
     }
@@ -697,7 +697,7 @@ h4 {
 
     .contenedorTarjetas {
         width: 65%;
-        margin-top: 12%;
+        margin-top: 7%;
         height: 60%;
     }
 
