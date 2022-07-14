@@ -16,7 +16,6 @@ const handleSubmit = (e) => {
   crearMensajeSaludo(cliente);
 }
 
-
 function alertaDeConfirmacion() {
   Swal.fire({
     position: 'top-end',
@@ -47,13 +46,12 @@ let primerResultado = null;
 let segundoResultado = null;
 let aciertos = 0;
 let temporizador = false;
-let timer = 30;
+let timer = 60;
 let numeros = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
 numeros = numeros.sort(() => { return Math.random() - 0.5 });
 console.log(numeros);
 
 //documento HTML
-
 
 function girar(id) {
 
@@ -69,13 +67,13 @@ function girar(id) {
 
     tarjeta1 = document.getElementById(id);
     primerResultado = numeros[id];
-    tarjeta1.innerHTML = `${primerResultado}`;              /* `<img src="../imagenes/${primerResultado}.jpg" alt="imgen">`; */
+    tarjeta1.innerHTML = `<img src="../imagenes/${primerResultado}.jpg" alt="imgen">`;
     tarjeta1.disabled = true;
   } else if (tarjetasDestapadas == 2) {
 
     tarjeta2 = document.getElementById(id);
     segundoResultado = numeros[id];
-    tarjeta2.innerHTML = `${segundoResultado}`  /* `<img src="../imagenes/${segundoResultado}.jpg" alt="imgen">`; */
+    tarjeta2.innerHTML = `<img src="../imagenes/${segundoResultado}.jpg" alt="imgen">`;
     tarjeta2.disabled = true;
 
     if (primerResultado == segundoResultado) {
@@ -109,7 +107,7 @@ function girar(id) {
         tarjeta1.disabled = false;
         tarjeta2.disabled = false;
         tarjetasDestapadas = 0;
-      }, 800)
+      }, 1800)
     }
   }
 
@@ -176,7 +174,7 @@ function bloquearTarjetas() {
 
   for (let i = 0; i <= 15; i++) {
     const tarjetaBloqueada = document.getElementById(i);
-    tarjetaBloqueada.innerHTML = numeros[i];
+    tarjetaBloqueada.innerHTML = `<img src="../imagenes/${numeros[i]}.jpg" alt="imgen">`
     tarjetaBloqueada.disabled = true;
 
   }

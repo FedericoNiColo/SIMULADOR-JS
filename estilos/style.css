@@ -36,14 +36,26 @@ html {
 }
 
 .sombraClara {
-    -webkit-box-shadow: 0px 4px 5px 7px rgba(0, 0, 0, 0.64);
-    -moz-box-shadow: 0px 4px 5px 7px rgba(0, 0, 0, 0.64);
-    box-shadow: 0px 4px 5px 7px rgba(0, 0, 0, 0.64);
+    -webkit-box-shadow: 0px 1px 6px 3px rgba(110, 108, 110, 1);
+    -moz-box-shadow: 0px 1px 6px 3px rgba(110, 108, 110, 1);
+    box-shadow: 0px 1px 6px 3px rgba(110, 108, 110, 1);
+}
+
+.sombraVerde {
+    -webkit-box-shadow: 0px 1px 9px 3px rgba(98, 245, 76, 1);
+    -moz-box-shadow: 0px 1px 9px 3px rgba(98, 245, 76, 1);
+    box-shadow: 0px 1px 9px 3px rgba(98, 245, 76, 1);
+}
+
+.sombraRoja {
+    -webkit-box-shadow: 0px 1px 9px 3px rgba(245, 0, 0, 1);
+    -moz-box-shadow: 0px 1px 9px 3px rgba(245, 0, 0, 1);
+    box-shadow: 0px 1px 9px 3px rgba(245, 0, 0, 1);
 }
 
 
 #simulador {
-    width: 100vw;
+    max-width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-columns: 20% auto;
@@ -181,9 +193,9 @@ html {
     display: flex;
     width: 75%;
     margin: 0 auto;
-    margin-top: 15%;
+    margin-top: 12%;
     gap: 5rem;
-    height: 60rem;
+    height: 75rem;
     flex-wrap: no-wrap;
 }
 
@@ -199,7 +211,6 @@ html {
 .tituloTarjeta {
     grid-column: 1/3;
     width: 100%;
-    background-image: url(/imagenes/VISTA-2-PHTOSHOP.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -209,6 +220,14 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.interior {
+    background-image: url(/imagenes/VISTA-2-PHTOSHOP.jpg);
+}
+
+.exterior {
+    background-image: url(/imagenes/RENDER111.jpg);
 }
 
 .tituloTarjeta h3 {
@@ -394,9 +413,9 @@ h4 {
 
 .rectanguloMemorama {
     margin: 0 auto;
-    margin-top: 16rem;
+    margin-top: 12rem;
     width: 85%;
-    height: 60%;
+    height: 70%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
@@ -408,19 +427,18 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-
+    max-width: 100%;
+    position: relative;
+    background-color: var(--grisOscuro);
 }
 
 .rectanguloMemorama button {
+    position: absolute;
+    background-color: var(--grisTransparente);
     width: 100%;
     height: 100%;
-    background-color: var(--grisOscuro);
     border: none;
     cursor: pointer;
-    color: #ffffff;
-
 }
 
 .calculosJuego {
@@ -452,8 +470,8 @@ h4 {
 }
 
 .rectanguloMemorama img {
-
-
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 
 }
@@ -572,12 +590,11 @@ h4 {
         font-size: 2.5rem;
         width: 100%;
     }
-    
+
 
     .rectanguloMemorama {
         margin-top: 12rem;
-        width: 65%;
-        height: 55%;
+        
         gap: 0.5rem;
     }
 
@@ -703,8 +720,7 @@ h4 {
     .rectanguloMemorama {
         margin-top: 8rem;
         gap: 0.5rem;
-        width: 65%;
-        height: 60%;
+        
     }
 
     .calculosJuego {
