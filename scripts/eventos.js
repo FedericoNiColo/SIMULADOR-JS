@@ -10,6 +10,9 @@ const body = document.querySelector('#simulador');
 const seccionIzquierda = document.querySelector(".inicioJuego");
 const contenedorCartasCompradas = document.querySelector("#contenedorCartas");
 const contenedorFormulario = document.querySelector(".contenedorFormulario");
+const contenedorSaludo = document.querySelector("#contenedorSaludo");
+const contenedorCartas = document.querySelector("#contenedorCartas");
+
 
 //funciones
 const crearMensajeSaludo = (cliente) => {
@@ -214,10 +217,13 @@ function eliminarRenderDeLista() {
 
 function presentacionDeJuego() {
 
+    
     const btnJugar = document.querySelector('.botonJugar');
     desactivarBoton(btnJugar);
     contenedorFormulario.textContent = "";
-
+    
+    contenedorSaludo.remove();
+    contenedorCartas.remove();
     //mensaje en la parte izquierda 
     const contenedorMensajeJuego = document.querySelector("#contenedorMensajeJuego");
     const mensajeJuego = document.createElement("h3");
