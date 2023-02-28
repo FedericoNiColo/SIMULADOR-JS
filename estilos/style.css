@@ -71,8 +71,6 @@ html {
 .inicioJuego {
     grid-column: 1 / 2;
     background-color: var(--grisTransparente);
-    height: 100vh;
-
 }
 
 .logoSimulador {
