@@ -62,7 +62,7 @@ html {
 
 #simulador {
     max-width: 100vw;
-    height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-columns: 20% auto;
 }
@@ -128,7 +128,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 4em;
+    margin: 1rem;
 }
 
 
@@ -487,8 +487,8 @@ h4 {
 .resumenFinal {
     grid-column: 1/3;
     margin: 0 auto;
-    width: 40%;
-    height: 50%;
+    width: 60%;
+    height: 100%;
     background-color: var(--grisOscuro);
     text-align: center;
     font-family: 'Exo';
@@ -564,9 +564,7 @@ h4 {
         font-size: 1.5rem;
     }
 
-    .elementos {
-        margin: 1.5rem;
-    }
+
 
     .boton {
         height: 2.6rem;
